@@ -1,0 +1,22 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Car App</a>
+    </div>
+
+    <ul class="nav navbar-nav">
+      <li [routerLinkActive]="['active']"><a routerLink="/login">Login</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="/home">Home</a></li>
+      <li [routerLinkActive]="['active']"><a routerLink="/car">Car</a></li>
+    </ul>
+    <ul class="nav navbar-nav pull-right">
+    <p class="navbar-text" ><span class="welcome" >Welcome {{user.firstName}} {{user.lastName}}</span> <br>
+    </ul>
+
+  </div>
+</nav>
+<div class="container">
+
+</div>
+

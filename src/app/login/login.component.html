@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md-4 col-md-offset-4">
+      <h1 class="text-center login-title">Sign in to Car App</h1>
+      <div class="account-wall">
+        <img class="profile-img" src="http://www.lumineers.me/images/core/profile-image-zabadnesterling.gif"
+             alt="">
+        <form [formGroup]="loginForm" class="form-signin">
+          <input type="text"  class="form-control" placeholder="Email" required autofocus name="username"
+          formControlName="usernameTxt"
+          >
+          <input type="password"  class="form-control" placeholder="Password" required name="password"
+          formControlName="usernameTxt"
+          >
+         <button (click)="login()" class="btn btn-lg btn-primary btn-block" type="button">
+            Sign in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

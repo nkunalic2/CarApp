@@ -11,6 +11,7 @@ import {CarModule} from "./cars/car/car.module";
 import { routes } from './app.routing';
 import {UserService} from "./user/user.service";
 import {NavbarModule} from "./navbar/navbar.module";
+import {SignupModule} from "./signup/signup.module";
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import {NavbarModule} from "./navbar/navbar.module";
     HomeModule,
     CarModule,
     routes,
-    NavbarModule
+    NavbarModule,
+    SignupModule
   ],
 
   bootstrap: [AppComponent],

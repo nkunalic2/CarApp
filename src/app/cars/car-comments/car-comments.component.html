@@ -1,9 +1,9 @@
-<div class="container">
+
 
   <!--displaying COMMENT box-->
   <div class="row">
     <div class="container">
-      <div class="detailBox">
+      <div class="detailBox ">
         <div class="titleBox">
           <label>Comments on this car</label>
         </div>
@@ -16,27 +16,41 @@
               </div>
               <div class="commentText">
                 <p class="">{{comm.comment}}</p> <span class="date sub-text">on {{comm.date}}</span>
-
               </div>
             </li>
           </ul>
           <!--form for adding new comment-->
           <form [formGroup]="commentForm"
-                class="form-inline" role="form">
-            <div class="form-group">
-              <input class="form-control" type="text" placeholder="Your comments"
+                class="form-hotizontal" role="form">
+
+            <div class="row">
+
+             <div class="col-sm-10">
+               <input class="form-control " type="text" placeholder="Your comments"
                      formControlName="commentText" name="commentar" />
+             </div>
+              <div class="visible-xs-block form-group"></div> <!--for vertical space when stacking columns-->
+              <div class="col-sm-2">
+              <button class="btn btn-default btnResponsive " (focus)="Validate()" type="submit">Add</button>
+              </div>
+
             </div>
-            <div class="form-group">
-              <button class="btn btn-default" (focus)="Validate()" >Add</button>
-            </div>
+
+            <div class="row">
+
+              <div class="col-sm-12">
             <div *ngIf="!validated && !commentForm.controls['commentText'].valid" class="errorMessage">
               Comment text is required.
             </div>
+              </div>
+
+            </div>
+
           </form>
+
         </div>
       </div>
     </div>
   </div> <!--end COMMENT bod-->
 
-</div>
+

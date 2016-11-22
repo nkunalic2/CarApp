@@ -26,7 +26,7 @@ export class CarCommentsComponent implements OnInit {
 
   /*Validation for comment text - required*/
   Validate() {
-    if (!this.commentForm.controls['commentText'].valid && this.commentForm.controls['commentText'].dirty) {
+    if (!this.commentForm.controls['commentText'].valid) {
       this.validated=false;
     }
     else {

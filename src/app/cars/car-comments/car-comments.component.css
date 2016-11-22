@@ -1,9 +1,7 @@
-
-
 .detailBox {
-
   border:1px solid #bbb;
-  margin:50px;
+  margin-top:25px;
+
 }
 .titleBox {
   background-color:#fdfdfd;
@@ -14,7 +12,6 @@
   margin:0;
   display:inline-block;
 }
-
 .commentBox {
   padding:10px;
   border-top:1px dotted #bbb;
@@ -70,3 +67,90 @@
 .errorMessage{
   color: #ff0039;
 }
+
+.btnResponsive {
+width: 100%;
+
+}
+
+/*@media screen and (min-width: 769px) {*/
+
+
+  /*.btnResponsive {*/
+    /*width: 20%;*/
+
+  /*}*/
+/*}*/
+
+/*@media screen and (max-width: 768px) {*/
+  /*.cmntResponsive {*/
+    /*width: 80%;*/
+  /*}*/
+
+
+/*}*/
+
+/*!*For browser/screen widths less than 768px*!*/
+/*@media screen and (max-width: 768px) {*/
+
+
+  /*.btnResponsive {*/
+    /*width: 100%;*/
+    /*margin-top: 10px;*/
+  /*}*/
+/*}*/
+
+  /*@media screen and (max-width: 768px) {*/
+    /*.cmntResponsive {*/
+      /*width: 100%;*/
+    /*}*/
+
+
+  /*}*/
+
+
+/*reponsive design*/
+/*Mobile*/
+  /*@media screen and and (min-width: 480px){*/
+  /*.cmntResponsive {*/
+    /*width: 100%;*/
+  /*}*/
+    /*.btnResponsive {*/
+      /*width: 100%;*/
+      /*margin-top: 10px;*/
+    /*}*/
+/*}*/
+
+
+ /*Tablet*/
+  /*@media screen and and (min-width: 768px){*/
+  /*.cmntResponsive {*/
+    /*width: 100%;*/
+  /*}*/
+  /*.btnResponsive {*/
+    /*width: 100%;*/
+    /*margin-top: 10px;*/
+  /*}*/
+/*}*/
+
+ /*!*Desktop*!*/
+    /*@media screen and and (min-width: 992px){*/
+    /*.cmntResponsive {*/
+      /*width: 80%;*/
+    /*}*/
+    /*.btnResponsive {*/
+      /*width: 100%;*/
+
+    /*}*/
+/*}*/
+
+ /*!*Huge*!*/
+      /*@media screen and and (min-width: 1280px) {*/
+      /*.cmntResponsive {*/
+        /*width: 80%;*/
+      /*}*/
+      /*.btnResponsive {*/
+        /*width: 100%;*/
+
+      /*}*/
+/*}*/

@@ -8,6 +8,7 @@ import {StepThreeComponent} from "./step-three/step-three.component";
 import {StepFourComponent} from "./step-four/step-four.component";
 import {StepOneComponent} from "./step-one/step-one.component";
 import {ReactiveFormsModule} from "@angular/forms";
+import {SignupService} from "./signup.service";
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     StepOneComponent,
     StepTwoComponent,
     StepThreeComponent,
-    StepFourComponent]
+    StepFourComponent],
+  providers: [SignupService]
 })
 export class SignupModule { }

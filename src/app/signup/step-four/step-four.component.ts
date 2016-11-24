@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SignupService} from "../signup.service";
 
 @Component({
   selector: 'app-step-four',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StepFourComponent implements OnInit {
 
-  constructor() { }
+  constructor(private singupService: SignupService) { }
 
   ngOnInit() {
   }

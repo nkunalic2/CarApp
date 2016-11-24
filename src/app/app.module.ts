@@ -12,11 +12,16 @@ import { routes } from './app.routing';
 import {UserService} from "./user/user.service";
 import {NavbarModule} from "./navbar/navbar.module";
 import {SignupModule} from "./signup/signup.module";
+import {AlertModule} from "ng2-bootstrap";
+import {SharedModule} from "./shared/shared.module";
+import { NgInputComponent } from './shared/ng-input/ng-input.component';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NgInputComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,9 @@ import {SignupModule} from "./signup/signup.module";
     CarModule,
     routes,
     NavbarModule,
-    SignupModule
+    SignupModule,
+    AlertModule
+    SharedModule
   ],
 
   bootstrap: [AppComponent],

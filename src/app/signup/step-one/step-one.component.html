@@ -1,3 +1,30 @@
-<p>
-  step-one works!
-</p>
+
+      <form [formGroup]="stepOneForm" class="form-horizontal">
+        <div class="form-group"></div>
+        <div class="form-group"></div>
+    <div class="col-sm-offset-2 col-sm-4" >
+        <input type="text"  class="form-control" placeholder="first name *" required autofocus name="firstname"
+               formControlName="firstName"
+      >
+    </div>
+        <div class="visible-xs-block form-group"></div>
+        <div class="col-sm-4">
+        <input type="text"  class="form-control" placeholder="last name *" required autofocus name="lastname"
+               formControlName="lastName"
+        >
+          </div>
+        <div class="form-group"></div>
+        <div class="col-sm-offset-2 col-sm-4">
+          <input type="email"  class="form-control" placeholder="email address *" required autofocus name="email"
+                 formControlName="email"
+          >
+        </div>
+        <div class="visible-xs-block form-group"></div>
+        <div class="col-sm-4">
+          <input type="password"  class="form-control" placeholder="password *" required autofocus name="password"
+                 formControlName="password"
+          >
+        </div>
+
+      </form>
+

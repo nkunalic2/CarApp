@@ -22,7 +22,8 @@ export class SignupService{
         firstName: new FormControl('', [<any> Validators.required]),
         lastName: new FormControl('', [<any> Validators.required]),
         email: new FormControl('', [<any> Validators.required]),
-        password: new FormControl('', [<any> Validators.required])
+        password: new FormControl('', [<any> Validators.required]),
+        privacyAgreement: new FormControl('', [<any> Validators.required])
       })
     });
 

@@ -9,19 +9,28 @@ import {StepFourComponent} from "./step-four/step-four.component";
 import {StepOneComponent} from "./step-one/step-one.component";
 import {ReactiveFormsModule} from "@angular/forms";
 import {SignupService} from "./signup.service";
+import {NgInputComponent} from "../shared/ng-input/ng-input.component";
+import {SharedModule} from "../shared/shared.module";
+import {SharedComponent} from "../shared/shared.component";
+
+
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   declarations: [SignupComponent,
     SignupWizardStep1Component,
     StepOneComponent,
     StepTwoComponent,
     StepThreeComponent,
-    StepFourComponent],
+    StepFourComponent,
+    SharedComponent,
+    NgInputComponent
+  ],
   providers: [SignupService]
 })
 export class SignupModule { }

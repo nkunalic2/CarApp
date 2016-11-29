@@ -12,6 +12,7 @@ import {SignupService} from "./signup.service";
 import {NgInputComponent} from "../shared/ng-input/ng-input.component";
 import {SharedModule} from "../shared/shared.module";
 import {SharedComponent} from "../shared/shared.component";
+import {SignupDataService} from "./signup-data.service";
 
 
 
@@ -31,6 +32,6 @@ import {SharedComponent} from "../shared/shared.component";
     SharedComponent,
     NgInputComponent
   ],
-  providers: [SignupService]
+  providers: [SignupService,SignupDataService]
 })
 export class SignupModule { }

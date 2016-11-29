@@ -12,21 +12,18 @@
          <!--checkbox for Privacy agreemnet-->
         <div class="row">
         <div class="col-sm-offset-2 col-sm-4">
-        <label class="checkbox-inline checkboxStyle"><input type="checkbox" value="" checked formControlName="privacyAgreement">Privacy agreement</label>
+        <label class="checkbox-inline checkboxStyle"><input type="checkbox" formControlName="privacyAgreement" cchecked>Privacy agreement</label>
         </div>
         </div>
-          <!--Link for privacy details-->
         <div class="row">
+          <!--Link for privacy details-->
         <div class="col-sm-offset-2 col-sm-4">
           <a href="#" class="privacyStyle">Link</a>
-
+          <!--button for next step-->
         </div>
-          <div class="col-sm-offset-2 col-sm-3">
-          <button type="submit" class="btn btnStyle"  (click)="submitForm()">next</button>
+          <div class="col-sm-offset-2 col-sm-2">
+          <button type="button" class="btn btnStyle"  (click)="submitForm()">next</button>
             </div>
-
         </div>
-
-
       </form>
 

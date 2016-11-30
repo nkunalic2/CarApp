@@ -13,14 +13,18 @@ import {UserService} from "./user/user.service";
 import {NavbarModule} from "./navbar/navbar.module";
 import {SignupModule} from "./signup/signup.module";
 import {AlertModule} from "ng2-bootstrap";
-import {SignupDataService} from "./signup/signup-data.service";
+// import { DatepickerModule } from 'ng2-bootstrap/ng2-bootstrap';
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+
 
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,8 @@ import {SignupDataService} from "./signup/signup-data.service";
     routes,
     NavbarModule,
     SignupModule,
-    AlertModule
+    AlertModule,
+    NgbModule.forRoot()
   ],
 
   bootstrap: [AppComponent],

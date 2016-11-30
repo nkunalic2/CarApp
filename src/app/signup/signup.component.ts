@@ -12,6 +12,10 @@ export class SignupComponent implements OnInit {
   currentStep=1;
   numberOfSteps=3;
   _signUpForm:FormGroup;
+
+  value: Date;
+
+
   constructor( private signupService: SignupService) { }
 
   ngOnInit() {

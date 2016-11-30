@@ -1,6 +1,20 @@
-<p>
-  step-two works!
-</p>
-<div class="col-sm-offset-2 col-sm-2">
-  <button type="button" class="btn btnStyle"  (click)="previousForm()">Previous</button>
-</div>
+
+<form [formGroup]="stepTwoForm">
+
+
+  <div class="row">
+  Birth date *
+    <div class="col-sm-offset-2 col-sm-4">
+  <div class="input-group col-sm-offset-2 col-sm-4">
+
+    <input class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker" required formControlName="date">
+    <div class="input-group-addon" (click)="d.toggle()" >
+      <i class="fa fa-calendar" aria-hidden="true"></i>
+    </div>
+
+  </div>
+    </div>
+
+  </div>
+
+</form>

@@ -24,7 +24,18 @@ export class SignupService{
         email: new FormControl('', [<any> Validators.required]),
         password: new FormControl('', [<any> Validators.required]),
         privacyAgreement: new FormControl('', [<any> Validators.required])
+      }),
+      stepTwoForm: new FormGroup({
+        // date: []
+        dateLabel: new FormControl('', [<any> Validators.required]),
+        // birthDate: new FormControl('', [<any> Validators.required]),
+        // placeLabel: new FormControl('', [<any> Validators.required]),
+        // birthPlace: new FormControl('', [<any> Validators.required]),
+        // avatar: new FormControl('', [<any> Validators.required]),
+        // description: new FormControl('', [<any> Validators.required])
+       date: new FormControl('')
       })
+
     });
 
     // this.stepOneForm=this.formBuilder.group({

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: string;
+  date: moment.Moment;
   constructor (){
 
   }

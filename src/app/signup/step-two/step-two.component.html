@@ -2,10 +2,12 @@
 <form [formGroup]="stepTwoForm">
 
 
+
   <div class="row">
-  Birth date *
-    <div class="col-sm-offset-2 col-sm-4">
-  <div class="input-group col-sm-offset-2 col-sm-4">
+
+    <div class="col-md-offset-2 col-md-3 col-sm-6">
+      <label>Birth date *</label>
+  <div class="input-group">
 
     <input class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker" required formControlName="date">
     <div class="input-group-addon" (click)="d.toggle()" >
@@ -15,6 +17,18 @@
   </div>
     </div>
 
-  </div>
+    <div class="col-md-offset-1 col-md-4 col-sm-12">
+      <label>Birth place country *</label>
+      <div ngbDropdown class="d-inline-block" >
+        <button class="btn btn-secondary" id="dropdownMenu1" ngbDropdownToggle style="width:100%" >Options</button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu1" >
+          <button class="dropdown-item">Action - 1</button>
+          <button class="dropdown-item">Another Action</button>
+          <button class="dropdown-item">Something else is here</button>
+        </div>
 
+    </div>
+
+  </div>
+</div>
 </form>

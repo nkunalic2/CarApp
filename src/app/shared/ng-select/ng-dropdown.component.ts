@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 
 
 @Component({
-  selector: 'single-demo',
+  selector: 'app-ng-select',
   templateUrl: './ng-dropdown.component.html'
 })
-export class SingleDemoComponent {
+export class NgSelectComponent {
   options = [
     {
       value: 'a',

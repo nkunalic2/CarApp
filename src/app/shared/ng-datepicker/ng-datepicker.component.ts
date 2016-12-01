@@ -2,7 +2,7 @@ import {Component, Input} from '@angular/core';
 import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'ngbd-datepicker-customday',
+  selector: 'app-ng-datepicker',
   templateUrl: './ng-datepicker.component.html',
   styles: [`
     .custom-day {      
@@ -25,7 +25,7 @@ import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
     }
   `]
 })
-export class NgbdDatepickerCustomday {
+export class  NgDatepickerComponent {
   model: NgbDateStruct;
 
   isWeekend(date: NgbDateStruct) {

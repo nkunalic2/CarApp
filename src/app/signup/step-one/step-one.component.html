@@ -2,26 +2,26 @@
         <div class="form-group"></div>
         <div class="form-group"></div>
           <!-- Customized input type to avoid code repeating-->
-          <app-shared [bootstrap]="'col-sm-offset-2 col-sm-4'" [type]="'text'" [placeholder]="'first name *'" [name]="'firstname'" [controlName]="'firstName'" ></app-shared>
+          <app-shared [bootstrap]="'col-sm-12 col-md-offset-2 col-md-4'" [type]="'text'" [placeholder]="'first name *'" [name]="'firstname'" [controlName]="'firstName'" ></app-shared>
           <div class="visible-xs-block form-group"></div>
-          <app-shared [bootstrap]="'col-sm-4'" [type]="'text'" [placeholder]="'last name *'" [name]="'lastname'" [controlName]="'lastName'" ></app-shared>
+          <app-shared [bootstrap]="'col-sm-12 col-md-4'" [type]="'text'" [placeholder]="'last name *'" [name]="'lastname'" [controlName]="'lastName'" ></app-shared>
           <div class="form-group"></div>
-          <app-shared [bootstrap]="'col-sm-offset-2 col-sm-4'" [type]="'text'" [placeholder]="'email address *'" [name]="'firstname'" [controlName]="'email'" ></app-shared>
+          <app-shared [bootstrap]="'col-sm-12 col-md-offset-2 col-md-4'" [type]="'text'" [placeholder]="'email address *'" [name]="'firstname'" [controlName]="'email'" ></app-shared>
           <div class="visible-xs-block form-group"></div>
-          <app-shared [bootstrap]="'col-sm-4'" [type]="'password'" [placeholder]="'password *'" [name]="'password'" [controlName]="'password'" ></app-shared>
+          <app-shared [bootstrap]="'col-sm-12 col-md-4'" [type]="'password'" [placeholder]="'password *'" [name]="'password'" [controlName]="'password'" ></app-shared>
          <!--checkbox for Privacy agreemnet-->
         <div class="row">
-        <div class="col-sm-offset-2 col-sm-4">
+        <div class="col-sm-12 col-md-offset-2 col-md-4 responsiveForm">
         <label class="checkbox-inline checkboxStyle"><input type="checkbox" formControlName="privacyAgreement" cchecked>Privacy agreement</label>
         </div>
         </div>
         <div class="row">
           <!--Link for privacy details-->
-        <div class="col-sm-offset-2 col-sm-4">
+        <div class="col-sm-6 col-md-offset-2 col-md-4 responsiveForm">
           <a href="#" class="privacyStyle">Link</a>
           <!--button for next step-->
         </div>
-          <div class="col-sm-offset-2 col-sm-2">
+          <div class="col-sm-6 col-md-offset-2 col-md-2 responsiveForm">
           <button type="button" class="btn btnStyle"  (click)="submitForm()">next</button>
             </div>
         </div>

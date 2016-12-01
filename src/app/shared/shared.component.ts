@@ -1,6 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {SignupService} from "../signup/signup.service";
-import {FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup, FormControl, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-shared',

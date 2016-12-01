@@ -9,7 +9,6 @@ import {StepOneComponent} from "./step-one/step-one.component";
 import {ReactiveFormsModule} from "@angular/forms";
 import {SignupService} from "./signup.service";
 import {SharedModule} from "../shared/shared.module";
-import {SharedComponent} from "../shared/shared.component";
 
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
@@ -27,15 +26,14 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
     CommonModule,
     RouterModule,
     ReactiveFormsModule,
-    SharedModule,
-    NgbModule
+    NgbModule,
+    SharedModule
   ],
   declarations: [SignupComponent,
     StepOneComponent,
     StepTwoComponent,
     StepThreeComponent,
-    StepFourComponent,
-    SharedComponent,
+    StepFourComponent
 
   ],
   providers: [SignupService]

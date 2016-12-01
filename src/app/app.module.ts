@@ -16,6 +16,7 @@ import {AlertModule} from "ng2-bootstrap";
 // import { DatepickerModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {SharedModule} from "./shared/shared.module";
 
 
 
@@ -38,7 +39,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     NavbarModule,
     SignupModule,
     AlertModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    SharedModule
   ],
 
   bootstrap: [AppComponent],

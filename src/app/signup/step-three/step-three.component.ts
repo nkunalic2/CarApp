@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SignupService} from "../signup.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-step-three',
@@ -8,9 +9,12 @@ import {SignupService} from "../signup.service";
 })
 export class StepThreeComponent implements OnInit {
 
-  constructor(private singupService: SignupService) { }
+  constructor(private singupService: SignupService, private router: Router) { }
 
   ngOnInit() {
   }
 
+  previousForm(){
+    this.router.navigate(["signup/step2"]);
+  }
 }

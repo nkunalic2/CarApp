@@ -9,12 +9,12 @@ import {SignupService} from "./signup.service";
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  currentStep=1;
+  // currentStep=1;
   numberOfSteps=3;
   _signUpForm:FormGroup;
-
   value: Date;
 
+  currentStep:number;
 
   constructor( private signupService: SignupService) { }
 
@@ -24,6 +24,7 @@ export class SignupComponent implements OnInit {
   //    progress: new FormControl('')
   //   });
     this._signUpForm=this.signupService.signUpForm;
+    this.currentStep=this.signupService.getStep();
    }
 
 }

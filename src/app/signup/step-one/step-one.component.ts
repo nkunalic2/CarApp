@@ -20,6 +20,7 @@ export class StepOneComponent implements OnInit {
 
   submitForm(){
     //navigating to next step
+    this.signupService.setStep(2);
     this.router.navigate(["signup/step2"]);
   }
 

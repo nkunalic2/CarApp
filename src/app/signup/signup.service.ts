@@ -8,6 +8,7 @@ import {FormBuilder, FormGroup, FormControl, Validators} from "@angular/forms";
 @Injectable()
 
 export class SignupService{
+  currentStep=1;
   signUpForm:FormGroup;
   // stepOneForm:FormGroup;
   stepTwoForm:FormGroup;
@@ -26,14 +27,10 @@ export class SignupService{
         privacyAgreement: new FormControl('', [<any> Validators.required])
       }),
       stepTwoForm: new FormGroup({
-        // date: []
-        dateLabel: new FormControl('', [<any> Validators.required]),
-        // birthDate: new FormControl('', [<any> Validators.required]),
-        // placeLabel: new FormControl('', [<any> Validators.required]),
-        // birthPlace: new FormControl('', [<any> Validators.required]),
-        // avatar: new FormControl('', [<any> Validators.required]),
-        // description: new FormControl('', [<any> Validators.required])
-       date: new FormControl('')
+        birthDay: new FormControl(''),
+        birthPlace: new FormControl(''),
+        profilePic: new FormControl(''),
+        comment:new FormControl(''),
       })
 
     });
@@ -52,6 +49,12 @@ export class SignupService{
     // this.stepFourForm=this.formBuilder.group({
     //   //here goes the form for fourth step
     // });
+  }
+  setStep(step:number){
+    this.currentStep=step;
+  }
+  getStep(){
+    return this.currentStep;
   }
   }
 

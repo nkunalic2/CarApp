@@ -10,7 +10,9 @@ import {NgSelectComponent} from "./ng-select/ng-dropdown.component";
 
 import {SelectModule} from "angular2-select";
 import {FancyImageUploaderModule} from "ng2-fancy-image-uploader";
-import {NgUploaderComponent} from "./ng-imauploader.component";
+import {NgTextareaComponent} from "./ng-textarea/ng-textarea.component";
+import {NgAvatarComponent} from "./ng-avatar/ng-avatar.component";
+import {FileUploaderComponent} from "./ng-fileupload/ng-fileupload.component";
 @NgModule({
   imports: [
     CommonModule,
@@ -20,7 +22,7 @@ import {NgUploaderComponent} from "./ng-imauploader.component";
     SelectModule,
     FancyImageUploaderModule
   ],
-  declarations: [SharedComponent, NgInputComponent, NgDatepickerComponent, NgSelectComponent, NgUploaderComponent],
-  exports:[SharedComponent, NgInputComponent, NgDatepickerComponent, NgSelectComponent, NgUploaderComponent]
+  declarations: [SharedComponent, NgInputComponent, NgDatepickerComponent, NgSelectComponent, NgTextareaComponent, NgAvatarComponent, ],
+  exports:[SharedComponent, NgInputComponent, NgDatepickerComponent, NgSelectComponent ,NgTextareaComponent, NgAvatarComponent]
 })
 export class SharedModule { }

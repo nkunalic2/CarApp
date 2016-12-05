@@ -20,5 +20,12 @@ export class StepTwoComponent implements OnInit {
   previousForm(){
     this.router.navigate(["signup/step1"]);
   }
+  submitForm(){
+    console.log('two', this.stepTwoForm);
+    //navigating to next step
+    // this._signupService.setStep(2);
+    this.router.navigate(["signup/step3"]);
+  }
+
 
 }

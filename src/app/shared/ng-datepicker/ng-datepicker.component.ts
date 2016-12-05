@@ -1,5 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
+import {SignupService} from "../../signup/signup.service";
+import {FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-ng-datepicker',
@@ -23,10 +25,18 @@ import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
     .hidden {
       display: none;
     }
-  `]
+  `],
+  inputs:['controlName', 'formName']
 })
 export class  NgDatepickerComponent {
   model: NgbDateStruct;
+  stepTwoForm: FormGroup;
+  constructor(private signupService: SignupService){
+  }
+
+  ngOnInit() {
+    this.stepTwoForm=<FormGroup>this.signupService.signUpForm.controls['stepTwoForm'];
+  }
 
   isWeekend(date: NgbDateStruct) {
     const d = new Date(date.year, date.month - 1, date.day);

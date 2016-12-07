@@ -1,7 +1,8 @@
 <form [formGroup]="stepTwoForm" class="form-inline">
   <div class="form-group">
     <div class="input-group">
-      <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker [dayTemplate]="customDay" [markDisabled]="isDisabled" #d="ngbDatepicker"   formControlName={{controlName}}>
+      <input style="width:250px" [(ngModel)]="model" ngbDatepicker class="form-control" #d="ngbDatepicker"  type="text" formControlName={{controlName}}>
+      <!--<input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker [dayTemplate]="customDay" [markDisabled]="isDisabled" #d="ngbDatepicker"   formControlName={{controlName}}>-->
       <div class="input-group-addon" (click)="d.toggle()" >
         <i class="fa fa-calendar" aria-hidden="true"></i>
       </div>

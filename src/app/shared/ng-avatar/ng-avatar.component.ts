@@ -5,7 +5,7 @@
 //our root app component
 import {Component, NgModule, ChangeDetectorRef} from '@angular/core'
 import {SignupService} from "../../signup/signup.service";
-import {FormGroup} from "@angular/forms";
+import {FormGroup, FormControl} from "@angular/forms";
 // import {BrowserModule} from '@angular/platform-browser'
 
 @Component({
@@ -13,6 +13,7 @@ import {FormGroup} from "@angular/forms";
   templateUrl: 'ng-avatar.component.html'
 })
 export class NgAvatarComponent {
+  model:any;
   public file_srcs: string[] = [];
   public src_file:string="http://2.bp.blogspot.com/-KLcHPORC4do/TbJCkjjkiBI/AAAAAAAAACw/zDnMSWC_R0M/w1200-h630-p-nu/facebook-no-image1.gif";
   stepTwoForm: FormGroup;
@@ -49,7 +50,9 @@ export class NgAvatarComponent {
       this.readFile(files[index], reader, (result) =>{
         // After the callback fires do:
         this.file_srcs.push(result);
+        // <FormControl>this.stepTwoForm.controls['profilePic']).setValue("Helll");
         this.src_file=result;
+        this.stepTwoForm.controls['profilePic'].setValue(this.src_file);
         // this.stepTwoForm.setValue({birthDay:"haa", birthPlace:"place", profilePic:'Hello', comment:"comm"});
         this.readFiles(files, index+1);// Read the next file;
       });

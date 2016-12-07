@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, DatePipe} from '@angular/common';
 import { SharedComponent } from './shared.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {NgInputComponent} from "./ng-input/ng-input.component";
@@ -13,6 +13,9 @@ import {FancyImageUploaderModule} from "ng2-fancy-image-uploader";
 import {NgTextareaComponent} from "./ng-textarea/ng-textarea.component";
 import {NgAvatarComponent} from "./ng-avatar/ng-avatar.component";
 import {FileUploaderComponent} from "./ng-fileupload/ng-fileupload.component";
+import {NgRadioButtonComponent} from "./ng-radiobutton/ng-radiobutton.component";
+import {DataService} from "./ng-select/data.service";
+import {DropdownModule} from "ng2-dropdown";
 @NgModule({
   imports: [
     CommonModule,
@@ -20,9 +23,11 @@ import {FileUploaderComponent} from "./ng-fileupload/ng-fileupload.component";
     DatepickerModule,
     NgbModule,
     SelectModule,
-    FancyImageUploaderModule
+    FancyImageUploaderModule,
+    DropdownModule
   ],
-  declarations: [SharedComponent, NgInputComponent, NgDatepickerComponent, NgSelectComponent, NgTextareaComponent, NgAvatarComponent, ],
-  exports:[SharedComponent, NgInputComponent, NgDatepickerComponent, NgSelectComponent ,NgTextareaComponent, NgAvatarComponent]
+  declarations: [SharedComponent, NgInputComponent, NgDatepickerComponent, NgSelectComponent, NgTextareaComponent, NgAvatarComponent, NgRadioButtonComponent ],
+  exports:[SharedComponent, NgInputComponent, NgDatepickerComponent, NgSelectComponent ,NgTextareaComponent, NgAvatarComponent, NgRadioButtonComponent],
+  providers:[DatePipe, DataService]
 })
 export class SharedModule { }

@@ -1,0 +1,12 @@
+<div>
+  <label>How did you find out about us</label>
+  <div *ngFor="let gender of genders">
+    <label>
+      <input type="radio" name="gender" [(ngModel)]="gen"
+             [value]="gender.value">
+      {{gender.display}}
+    </label>
+  </div>
+</div>
+<button type="button" class="btn btnStyle"  (click)="show()">show</button>
+{{countries}}

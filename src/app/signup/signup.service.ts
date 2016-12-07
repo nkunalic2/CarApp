@@ -29,7 +29,7 @@ export class SignupService{
       stepTwoForm: new FormGroup({
         birthDay: new FormControl(''),
         birthPlace: new FormControl(''),
-        profilePic: new FormControl(''),
+        profilePic: new FormControl('http://2.bp.blogspot.com/-KLcHPORC4do/TbJCkjjkiBI/AAAAAAAAACw/zDnMSWC_R0M/w1200-h630-p-nu/facebook-no-image1.gif'),
         comment:new FormControl(''),
       })
 

@@ -2,11 +2,11 @@
 
 
 <div>
-  <input type="file" multiple (change)="fileChange(input)" #input formControlName="profilePic"
+  <input type="file" multiple (change)="fileChange(input)" #input
 />
 </div>
 <!--<div *ngFor="let file_src of file_srcs">-->
-  <img [src]=src_file  class="img-responsive"  alt="Smiley face"  />
+  <img [src]="this.stepTwoForm.controls['profilePic'].value"  class="img-responsive"  alt="Smiley face"  />
 
 <!--</div>-->
 

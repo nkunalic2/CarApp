@@ -2,6 +2,7 @@ import {Component, Input} from '@angular/core';
 import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 import {SignupService} from "../../signup/signup.service";
 import {FormGroup} from "@angular/forms";
+import {DatePipe} from "@angular/common";
 
 @Component({
   selector: 'app-ng-datepicker',
@@ -31,7 +32,8 @@ import {FormGroup} from "@angular/forms";
 export class  NgDatepickerComponent {
   model: NgbDateStruct;
   stepTwoForm: FormGroup;
-  constructor(private signupService: SignupService){
+  newDate:Date;
+  constructor(private signupService: SignupService, private datePipe: DatePipe){
   }
 
   ngOnInit() {
@@ -46,4 +48,5 @@ export class  NgDatepickerComponent {
   isDisabled(date: NgbDateStruct, current: {month: number}) {
     return date.month !== current.month;
   }
+
 }

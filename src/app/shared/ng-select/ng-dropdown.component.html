@@ -1,5 +1,9 @@
-<form [formGroup]="stepTwoForm" class="form-inline">
-<ng-select
-  [options]="options" formControlName={{controlName}}>
-</ng-select>
+<form [formGroup]="stepTwoForm">
+
+  <select class="form-control" formControlName="birthPlace" >
+    <option *ngFor="let o of (countries ? countries.slice(0,5) : [])"  [value]="o.name" >{{o.name}}</option>
+  </select>
+
 </form>
+
+

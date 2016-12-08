@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {FormGroup} from "@angular/forms";
 import {SignupService} from "../../signup/signup.service";
 
@@ -9,6 +9,7 @@ import {SignupService} from "../../signup/signup.service";
   inputs:['bootstrap', 'type', 'placeholder', 'name', 'controlName']
 })
 export class NgInputComponent implements OnInit {
+  @Input() formName: FormGroup;
   // bootstrap:string;
   // type:string;
   // placeholder:string;

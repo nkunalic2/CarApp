@@ -12,15 +12,20 @@ import {Router} from "@angular/router";
 })
 export class StepOneComponent implements OnInit {
   stepOneForm: FormGroup;
-  constructor(private signupService: SignupService, private router: Router) { }
+  currentStep=1;
+  constructor(private signupService: SignupService, private router: Router) {
+
+  }
 
   ngOnInit() {
     this.stepOneForm=<FormGroup>this.signupService.signUpForm.controls['stepOneForm'];
+    this.signupService.setStep(this.currentStep);
+
   }
 
   submitForm(){
     //navigating to next step
-    this.signupService.setStep(2);
+
     this.router.navigate(["signup/step2"]);
   }
 

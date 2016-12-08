@@ -7,12 +7,12 @@
 
 
 <div class="container">
-  <div class="row">
+  <div class="row"  *ngIf="getStep()!=4">
       <h1 class="col-xs-12 col-md-8 col-md-offset-2 responsiveForm">Sign Up</h1>
   </div>
-  <div class="row">
+  <div class="row" *ngIf="getStep()!=4">
     <form [formGroup]="_signUpForm" class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 responsiveForm">
-      <label class=" progress-bar"> step {{currentStep}}/{{numberOfSteps}}</label>
+      <label class=" progress-bar"> step {{getStep()}}/{{numberOfSteps}}</label>
 
       <!--<div class="input-group">-->
         <!--<input class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker" required>-->

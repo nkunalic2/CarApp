@@ -7,3 +7,10 @@ input[type=password] {
   border-radius:0;
 }
 
+.nopadding{
+  padding:0%;
+}
+
+.custom{
+  border: 1px solid #ccc;
+}

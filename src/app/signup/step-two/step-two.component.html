@@ -5,11 +5,11 @@
 
     <div class="col-md-offset-2 col-md-3 col-sm-12">
       <label>Birth date *</label>
-      <app-ng-datepicker [controlName]="'birthDay'" [formName]="'stepTwoForm'"></app-ng-datepicker>
+      <app-ng-datepicker [controlName]="'birthDay'" [formName]="stepTwoForm"></app-ng-datepicker>
     </div>
     <div class="col-md-offset-1 col-md-4 col-sm-12">
       <label>Birth place country *</label>
-      <app-ng-select [controlName]="'birthPlace'" [formName]="'stepTwoForm'"></app-ng-select>
+      <app-ng-select [controlName]="'birthPlace'" [formName]="stepTwoForm" [countriesData]=countries></app-ng-select>
     </div>
 
 </div>

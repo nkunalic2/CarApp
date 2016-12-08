@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {SignupService} from "../signup.service";
 import {FormGroup} from "@angular/forms";
 import {Router} from "@angular/router";
+import {DataService} from "../../shared/ng-select/data.service";
 
 @Component({
   selector: 'app-step-two',
@@ -10,11 +11,15 @@ import {Router} from "@angular/router";
 })
 export class StepTwoComponent implements OnInit {
   stepTwoForm: FormGroup;
-  constructor(private _signupService: SignupService, private router: Router) { }
+  currentStep= 2;
+  countries: {};
+  constructor(private _signupService: SignupService, private router: Router, private dataService:DataService) { }
 
   ngOnInit() {
     this.stepTwoForm=<FormGroup>this._signupService.signUpForm.controls['stepTwoForm'];
+    this._signupService.setStep(this.currentStep);
     console.log('two', this.stepTwoForm);
+    this.callService();
   }
 
   previousForm(){
@@ -27,5 +32,18 @@ export class StepTwoComponent implements OnInit {
     this.router.navigate(["signup/step3"]);
   }
 
+  //method for calling service where countries will be fatched
+  callService(){
+    this.dataService.getData().subscribe(
+      res =>this.countries =(res) ,
+      err => this.logError(err),  () => console.log('Random Quote Complete')
+
+    );
+
+  }
+
+  logError(err) {
+    console.error('There was an error: ' + err);
+  }
 
 }

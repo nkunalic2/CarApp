@@ -1,10 +1,24 @@
-<p>
-  step-three works!
-</p>
+
+<div class="container">
 <div class="row">
-  <button type="button" class="btn btnStyle"  (click)="previousForm()">previous</button>
-</div>
-<div class="row">
+<div class="col-sm-offset-2">
 <app-ng-radiobutton></app-ng-radiobutton>
 </div>
+</div>
+</div>
+<div class="form-group"></div>
 
+<collapse-demo [formName]=marriageForm [data]=options></collapse-demo>
+<div class="form-group"></div>
+
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-3 ">
+    <button type="button" class="btn btnStyle"  (click)="previousForm()">previous</button>
+  </div>
+
+  <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-3 ">
+    <div class="visible-xs-block form-group"></div>
+
+    <modal-demo [formName]="signupForm" [options]="options"></modal-demo>
+  </div>
+</div>

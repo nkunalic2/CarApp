@@ -1,7 +1,8 @@
-<form [formGroup]="stepTwoForm">
 
-  <select class="form-control" formControlName="birthPlace" >
-    <option *ngFor="let o of (countries ? countries.slice(0,5) : [])"  [value]="o.name" >{{o.name}}</option>
+<form [formGroup]=formName>
+
+  <select class="form-control"  formControlName={{controlName}}  >
+    <option *ngFor="let o of countriesData"  [value]="o.name" [selected]="o.name" >{{o.name}}</option>
   </select>
 
 </form>

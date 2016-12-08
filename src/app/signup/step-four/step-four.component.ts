@@ -7,10 +7,11 @@ import {SignupService} from "../signup.service";
   styleUrls: ['step-four.component.css']
 })
 export class StepFourComponent implements OnInit {
-
+  currentStep= 4;
   constructor(private singupService: SignupService) { }
 
   ngOnInit() {
+    this.singupService.setStep(this.currentStep);
   }
 
 }

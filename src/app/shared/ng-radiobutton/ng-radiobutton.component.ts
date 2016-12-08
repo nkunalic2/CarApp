@@ -3,24 +3,34 @@
  */
 
 import {Component, Input} from '@angular/core';
+import {SignupService} from "../../signup/signup.service";
+import {FormGroup} from "@angular/forms";
 
 
 @Component({
   selector: 'app-ng-radiobutton',
   templateUrl: './ng-radiobutton.component.html',
   styles: [],
-  inputs:[]
+  inputs:[],
+
 })
 export class  NgRadioButtonComponent {
   gen:string;
+  stepThreeForm: FormGroup;
 
-  public genders = [
-    { value: 'F', display: 'Female' },
-    { value: 'M', display: 'Male' }
+  s="A";
+  public var1 = [
+    { value: 'A', display: 'Internet' },
+    { value: 'B', display: 'Educational institution' },
+    { value: 'C', display: 'Co-worker' },
+    { value: 'D', display: 'Other' }
   ];
-
-  constructor (){
-
+ public var2 =[
+  { value: 'C', display: 'Co-worker' },
+  { value: 'D', display: 'Other' }
+];
+  constructor (private signupService: SignupService){
+    this.stepThreeForm=<FormGroup>this.signupService.signUpForm.controls['stepThreeForm'];
 
   }
 
@@ -29,6 +39,10 @@ export class  NgRadioButtonComponent {
   }
   show(){
 
+  }
+
+  refresh(v:string){
+    this.s=v;
   }
 
 

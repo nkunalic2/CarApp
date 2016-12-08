@@ -31,6 +31,15 @@ export class SignupService{
         birthPlace: new FormControl(''),
         profilePic: new FormControl('http://2.bp.blogspot.com/-KLcHPORC4do/TbJCkjjkiBI/AAAAAAAAACw/zDnMSWC_R0M/w1200-h630-p-nu/facebook-no-image1.gif'),
         comment:new FormControl(''),
+      }),
+      stepThreeForm:new FormGroup({
+       source: new FormControl(''),
+        marriageForm:new FormGroup({
+          firstName: new FormControl('', [<any> Validators.required]),
+          birthDay: new FormControl(''),
+         time: new FormControl('')
+        })
+
       })
 
     });

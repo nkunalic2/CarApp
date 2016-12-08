@@ -1,0 +1,46 @@
+<!--<button type="button" class="btn btn-primary"-->
+        <!--(click)="isCollapsed = !isCollapsed">Toggle collapse-->
+<!--</button>-->
+
+
+
+<div class="row">
+  <div class="col-sm-offset-2">
+    <span style="margin-left: 1%;">Marriage status</span>
+  </div>
+</div>
+<div class="form-group"></div>
+<div class="row">
+  <div class="col-sm-offset-2">
+
+    <input type="checkbox" style="margin-left: 1%;" (click)="isCollapsed = !isCollapsed" />Married
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-offset-2 col-sm-8">
+<hr>
+<div (collapsed)="collapsed($event)"
+     (expanded)="expanded($event)"
+     [collapse]="!isCollapsed"
+     class="card card-block card-header">
+  First name *
+  <div class="row">
+    <app-ng-input [bootstrap]="'col-sm-5'" [type]="'text'" [placeholder]="'first name *'" [name]="'firstname'" [formName]="formName" [controlName]="'firstName'" ></app-ng-input>
+    <div class="visible-xs-block form-group"></div>
+    <div class="col-sm-offset-1 col-sm-3">
+    <app-ng-datepicker [formName]="formName" [controlName]="'birthDay'"></app-ng-datepicker>
+    </div>
+  </div>
+  <div class="form-group"></div>
+  <span>How long do you know each other *</span>
+  <div class="row">
+
+    <div class="col-sm-5">
+    <app-ng-select  [countriesData]=data [formName]="formName" [controlName]="'time'"></app-ng-select>
+  </div>
+  </div>
+</div>
+    </div>
+</div>

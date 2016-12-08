@@ -24,7 +24,9 @@ export class SignupComponent implements OnInit {
   //    progress: new FormControl('')
   //   });
     this._signUpForm=this.signupService.signUpForm;
-    this.currentStep=this.signupService.getStep();
+    // this.currentStep=this.signupService.currentStep;
    }
-
+   getStep(){
+     return this.signupService.getStep();
+   }
 }

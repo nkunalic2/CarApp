@@ -1,12 +1,16 @@
 <div>
-  <label>How did you find out about us</label>
-  <div *ngFor="let gender of genders">
-    <label>
-      <input type="radio" name="gender" [(ngModel)]="gen"
-             [value]="gender.value">
-      {{gender.display}}
-    </label>
+  <form [formGroup]="stepThreeForm" class="form-inline">
+  <div>How did you find out about us</div>
+
+  <div *ngFor="let v of var1" class="radio-inline col-sm-5" style="margin-left: 1%;" >
+
+      <input type="radio"  name="source"
+             [value]="v.value"  [(ngModel)]="var1.value" formControlName="source" [checked]="v.value">
+      {{v.display}}
+
+
   </div>
+
+    </form>
 </div>
-<button type="button" class="btn btnStyle"  (click)="show()">show</button>
-{{countries}}
+

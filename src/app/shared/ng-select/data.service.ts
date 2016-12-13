@@ -26,9 +26,9 @@ export class DataService {
   }
 
   //HTTP service
-  getData ():Observable<string>{
+  getData (): Observable<any>{
     return this.http.get(this.endpoint_url)
-      .map( res =>  res.json())
+      .map( res=>  res.json())
       //...errors if any
       .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
   }

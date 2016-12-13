@@ -1,10 +1,11 @@
 
 <form [formGroup]=formName>
 
-  <select class="form-control"  formControlName={{controlName}}  >
-    <option *ngFor="let o of countriesData"  [value]="o.name" [selected]="o.name" >{{o.name}}</option>
+  <select class="form-control" formControlName={{controlName}} >
+    <option *ngFor="let o of countriesData"  [ngValue]="o.name" [selected]="o.name=== formName.controls[controlName].value">{{o.name}}</option>
   </select>
 
 </form>
+
 
 

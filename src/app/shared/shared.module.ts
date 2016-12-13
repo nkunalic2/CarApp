@@ -8,7 +8,7 @@ import {NgDatepickerComponent} from "./ng-datepicker/ng-datepicker.component";
 import {DatepickerModule, CollapseModule, ModalModule} from "ng2-bootstrap";
 import {NgSelectComponent} from "./ng-select/ng-dropdown.component";
 
-import {SelectModule} from "angular2-select";
+// import {SelectModule} from "angular2-select";
 import {FancyImageUploaderModule} from "ng2-fancy-image-uploader";
 import {NgTextareaComponent} from "./ng-textarea/ng-textarea.component";
 import {NgAvatarComponent} from "./ng-avatar/ng-avatar.component";
@@ -18,6 +18,9 @@ import {DataService} from "./ng-select/data.service";
 import {DropdownModule} from "ng2-dropdown";
 import {CollapseDemoComponent} from "./ng-collapse/ng-collapse.component";
 import {ModalDemoComponent} from "./ng-modal/ng-modal.component";
+import {SingleDemoComponent} from "./ng-list/ng-list.component";
+import { SelectModule} from "ng2-select";
+
 @NgModule({
   imports: [
     CommonModule,
@@ -30,8 +33,8 @@ import {ModalDemoComponent} from "./ng-modal/ng-modal.component";
     CollapseModule,
     ModalModule
   ],
-  declarations: [SharedComponent, NgInputComponent, NgDatepickerComponent, NgSelectComponent, NgTextareaComponent, NgAvatarComponent, NgRadioButtonComponent, CollapseDemoComponent, ModalDemoComponent ],
-  exports:[SharedComponent, NgInputComponent, NgDatepickerComponent, NgSelectComponent ,NgTextareaComponent, NgAvatarComponent, NgRadioButtonComponent, CollapseDemoComponent, ModalDemoComponent],
+  declarations: [SharedComponent, NgInputComponent, NgDatepickerComponent, NgSelectComponent, NgTextareaComponent, NgAvatarComponent, NgRadioButtonComponent, CollapseDemoComponent, ModalDemoComponent, SingleDemoComponent ],
+  exports:[SharedComponent, NgInputComponent, NgDatepickerComponent, NgSelectComponent ,NgTextareaComponent, NgAvatarComponent, NgRadioButtonComponent, CollapseDemoComponent, ModalDemoComponent, SingleDemoComponent],
   providers:[DatePipe, DataService]
 })
 export class SharedModule { }

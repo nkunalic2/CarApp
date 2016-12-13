@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SignupService} from "../signup.service";
-import {FormGroup} from "@angular/forms";
+import {FormGroup, FormControl} from "@angular/forms";
 import {Router} from "@angular/router";
 import {DataService} from "../../shared/ng-select/data.service";
 
@@ -11,12 +11,14 @@ import {DataService} from "../../shared/ng-select/data.service";
 })
 export class StepTwoComponent implements OnInit {
   stepTwoForm: FormGroup;
+  birthPlace: FormControl;
   currentStep= 2;
   countries: {};
   constructor(private _signupService: SignupService, private router: Router, private dataService:DataService) { }
 
   ngOnInit() {
     this.stepTwoForm=<FormGroup>this._signupService.signUpForm.controls['stepTwoForm'];
+    this.birthPlace=<FormControl>this.stepTwoForm.controls['birthPlace'];
     this._signupService.setStep(this.currentStep);
     console.log('two', this.stepTwoForm);
     this.callService();

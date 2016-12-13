@@ -1,6 +1,6 @@
 <form [formGroup]=formName>
   <div class={{bootstrap}}>
-    <input type={{type}} class="form-control" placeholder={{placeholder}} autofocus   name={{name}}
+    <input type={{type}} class="form-control" placeholder={{placeholder}} autofocus   name={{name}} value={{formName.controls[controlName].value}}
            formControlName={{controlName}}
     >
 

@@ -27,7 +27,7 @@
      class="card card-block card-header">
   First name *
   <div class="row">
-    <app-ng-input [bootstrap]="'col-sm-5'" [type]="'text'" [placeholder]="'first name *'" [name]="'firstname'" [formName]="formName" [controlName]="'firstName'" ></app-ng-input>
+    <app-ng-input [bootstrap]="'col-sm-5'" [type]="'text'" [placeholder]="'first name *'" [name]="'firstname'" [formName]=marriageF [controlName]="'firstName'" ></app-ng-input>
     <div class="visible-xs-block form-group"></div>
     <div class="col-sm-offset-1 col-sm-3">
     <app-ng-datepicker [formName]="formName" [controlName]="'birthDay'"></app-ng-datepicker>
@@ -38,7 +38,7 @@
   <div class="row">
 
     <div class="col-sm-5">
-    <app-ng-select  [countriesData]=data [formName]="formName" [controlName]="'time'"></app-ng-select>
+    <app-ng-select  [countriesData]=data [formName]="marriageF" [controlName]="'time'"></app-ng-select>
   </div>
   </div>
 </div>

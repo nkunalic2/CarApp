@@ -1,0 +1,24 @@
+<form [formGroup]=formName>
+<div style="width: 300px; margin-bottom: 20px;">
+  <h3>Select a single city</h3>
+  <div *ngIf="items.length>0">
+  <ng-select [allowClear]="true"
+             [items]="items"
+
+             (data)="refreshValue($event)"
+             (selected)="selected($event)"
+             (removed)="removed($event)"
+             (typed)="typed($event)"
+             placeholder="No city selected"
+             [(ngModel)]="selectedData"  (change)="onDataSelected($event)" formControlName="birthPlace"
+             ngDefaultControl>
+
+  </ng-select>
+    </div>
+  <p></p>
+  <pre>{{value.text}}</pre>
+  <div>
+
+  </div>
+</div>
+</form>

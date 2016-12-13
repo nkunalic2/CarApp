@@ -5,7 +5,6 @@ import {FormGroup} from "@angular/forms";
 
 interface Option {
   name: string;
-  value: string;
 }
 
 @Component({
@@ -21,9 +20,9 @@ stepThreeForm: FormGroup;
   checkboxValue: boolean;
   signupForm:FormGroup;
   options: Option []=[
-    {name:'Less then a year', value:'first'},
-    {name:'1-5 years', value:'second'},
-    {name:'More then 5 years', value:'third'}
+    {name:'Less then a year'},
+    {name:'1-5 years'},
+    {name:'More then 5 years'}
   ];
   // options:[
   //   {name:"Less then a year"},

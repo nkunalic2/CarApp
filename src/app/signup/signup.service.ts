@@ -14,6 +14,7 @@ export class SignupService{
   stepTwoForm:FormGroup;
   stepThreeForm:FormGroup;
   stepFourForm:FormGroup;
+  marriageTime:any;
 
   constructor(private formBuilder:FormBuilder) {
     this.signUpForm = this.formBuilder.group({
@@ -33,6 +34,7 @@ export class SignupService{
         comment:new FormControl(''),
       }),
       stepThreeForm:new FormGroup({
+        birthTime: new FormControl(''),
        source: new FormControl(''),
         marriageForm:new FormGroup({
           firstName: new FormControl('', [<any> Validators.required]),
@@ -44,26 +46,18 @@ export class SignupService{
 
     });
 
-    // this.stepOneForm=this.formBuilder.group({
-    // //here goes the form for first step
-    //   firstName: new FormControl(''),
-    //   lastName: new FormControl('')
-    // });
-    // this.stepTwoForm=this.formBuilder.group({
-    //   //here goes the form for second step
-    // });
-    // this.stepThreeForm=this.formBuilder.group({
-    //   //here goes the form for third step
-    // });
-    // this.stepFourForm=this.formBuilder.group({
-    //   //here goes the form for fourth step
-    // });
   }
   setStep(step:number){
     this.currentStep=step;
   }
   getStep(){
     return this.currentStep;
+  }
+  setMarriage(time:string){
+    this.marriageTime=time;
+  }
+  getMarriage(){
+    return this.marriageTime;
   }
   }
 

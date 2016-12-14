@@ -3,6 +3,7 @@
  */
 import {Component, Input} from '@angular/core';
 import {FormGroup} from "@angular/forms";
+
 import {SignupService} from "../../signup/signup.service";
 
 
@@ -28,7 +29,7 @@ export class CollapseDemoComponent {
     console.log('changing', args);
   }
 ngOnInit(){
-  // console.log('aaa', this.data[1]);
+
 }
   public collapsed(event:any):void {
     console.log(event);

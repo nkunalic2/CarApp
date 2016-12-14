@@ -11,14 +11,12 @@ import {DataService} from "../../shared/ng-select/data.service";
 })
 export class StepTwoComponent implements OnInit {
   stepTwoForm: FormGroup;
-  birthPlace: FormControl;
   currentStep= 2;
   countries: {};
   constructor(private _signupService: SignupService, private router: Router, private dataService:DataService) { }
 
   ngOnInit() {
     this.stepTwoForm=<FormGroup>this._signupService.signUpForm.controls['stepTwoForm'];
-    this.birthPlace=<FormControl>this.stepTwoForm.controls['birthPlace'];
     this._signupService.setStep(this.currentStep);
     console.log('two', this.stepTwoForm);
     this.callService();
@@ -30,7 +28,6 @@ export class StepTwoComponent implements OnInit {
   submitForm(){
     console.log('two', this.stepTwoForm);
     //navigating to next step
-    // this._signupService.setStep(2);
     this.router.navigate(["signup/step3"]);
   }
 

@@ -11,10 +11,10 @@ import * as moment from 'moment';
 export class AppComponent {
   title: string;
   date: moment.Moment;
-  constructor (){
+  constructor () {
 
   }
-  ngOnInit(){
+  ngOnInit() {
 
   }
 }

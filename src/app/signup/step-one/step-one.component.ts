@@ -12,7 +12,8 @@ import {Router} from "@angular/router";
 })
 export class StepOneComponent implements OnInit {
   stepOneForm: FormGroup;
-  currentStep=1;
+  currentStep= 1;
+  notValidated = false;
   constructor(private signupService: SignupService, private router: Router) {
 
   }
@@ -25,8 +26,14 @@ export class StepOneComponent implements OnInit {
 
   submitForm(){
     //navigating to next step
-
+    if(this.stepOneForm.valid) {
+      this.notValidated = false;
     this.router.navigate(["signup/step2"]);
+    }
+    else{
+
+      this.notValidated = true;
+    }
   }
 
 }

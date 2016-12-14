@@ -1,11 +1,10 @@
-import {CARS} from "./car-data";
-import {Injectable} from "@angular/core";
-import {Car} from "./car";
-import {Http, Response, Request, RequestOptions} from "@angular/http";
-import 'rxjs/add/operator/map'
+import {CARS} from './car-data';
+import {Injectable} from '@angular/core';
+import {Http} from '@angular/http';
+import 'rxjs/add/operator/map';
 
 import {Observable}     from 'rxjs/Observable';
-import {stringify} from "@angular/core/src/facade/lang";
+
 
 
 /**
@@ -15,27 +14,27 @@ import {stringify} from "@angular/core/src/facade/lang";
 
 @Injectable()
 export class CarService {
-  public data:string;
-  endpoint_url:string = "https://restcountries.eu/rest/v1/alpha/";
+  public data: string;
+  endpoint_url: string = 'https://restcountries.eu/rest/v1/alpha/';
 
-  constructor(private http: Http){
+  constructor(private http: Http) {
     this.http = http;
   }
 
-  //HTTP service
-  getCarsByRegion (region:string):Observable<string>{
+  // HTTP service
+  getCarsByRegion (region: string): Observable<string> {
     return this.http.get(this.endpoint_url + region)
       .map( res => res.json())
-      //...errors if any
-      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+      // ...errors if any
+      .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
 
-  getCars(){
+  getCars() {
     return CARS;
   }
 
-  getCarById(id:number){
-     return this.getCars().find(car => car.id == id);
+  getCarById(id: number) {
+     return this.getCars().find(car => car.id === id);
   }
 
 

@@ -9,19 +9,13 @@ import {FormBuilder, FormGroup, FormControl, Validators} from "@angular/forms";
   inputs:['bootstrap', 'type', 'placeholder', 'name', 'controlName']
 })
 export class SharedComponent implements OnInit {
-  // @Input() bootstraptest:string;
-  // @Input() typetest:string;
-  // @Input() placeholdertest:string;
-  // @Input() nametest:string;
-  // @Input() formKontrolatest:string;
   stepOneForm: FormGroup;
-  // @Input() test: string;
+
   constructor(private signupService: SignupService) { }
 
   ngOnInit() {
     this.stepOneForm=<FormGroup>this.signupService.signUpForm.controls['stepOneForm'];
     console.log('b',this.stepOneForm.controls['privacyAgreement'].valueOf());
-    // this.signupService.signUpForm.controls['stepOneForm']
   }
 
 }

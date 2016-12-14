@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {RouterModule} from '@angular/router';
+
 import { HomeComponent } from './home.component';
-
-import {Routes, RouterModule, Route} from '@angular/router'
-
-import {DashboardComponent} from "../dashboard/dashboard.component";
-import {MyCarsComponent} from "../cars/my-cars/my-cars.component";
-import { NavbarModule } from "./../navbar/navbar.module";
+import {DashboardComponent} from '../dashboard/dashboard.component';
+import {MyCarsComponent} from '../cars/my-cars/my-cars.component';
+import { NavbarModule } from './../navbar/navbar.module';
 
 @NgModule({
   imports: [

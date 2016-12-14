@@ -1,22 +1,14 @@
-
-
-
-  <div class="row">
-
-    <div class="col-md-offset-2 col-md-3 col-sm-12">
+<div class="row">
+  <div class="col-md-offset-2 col-md-3 col-sm-12">
       <label>Birth date *</label>
-      <app-ng-datepicker [controlName]="'birthDay'" [formName]="stepTwoForm"></app-ng-datepicker>
-    </div>
-    <div class="col-md-offset-1 col-md-4 col-sm-12">
+      <app-ng-datepicker [formName]="stepTwoForm" [controlName]="'birthDay'" ></app-ng-datepicker>
+  </div>
+  <div class="col-md-offset-1 col-md-4 col-sm-12">
       <label>Birth place country *</label>
       <app-ng-select [controlName]="'birthPlace'" [formName]="stepTwoForm" [countriesData]=countries></app-ng-select>
-      <!--<single-demo [controlName]="birthPlace" [formName]="stepTwoForm"></single-demo>-->
-    </div>
-
+  </div>
 </div>
-
-  <div class="form-group"></div>
-
+<div class="form-group"></div>
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-3 ">
       <label>Avatar</label>
@@ -26,15 +18,12 @@
       <app-ng-textarea [controlName]="'comment'" [formName]="'stepTwoForm'"></app-ng-textarea>
     </div>
   </div>
-
   <div class="form-group"></div>
   <div class="form-group"></div>
-
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-3 ">
     <button type="button" class="btn btnStyle"  (click)="previousForm()">previous</button>
       </div>
-
     <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-3 ">
       <div class="visible-xs-block form-group"></div>
       <button type="button" class="btn btnStyle"  (click)="submitForm()">next</button>

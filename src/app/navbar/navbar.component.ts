@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {User} from "../user/user";
-import {UserService} from "../user/user.service";
+
+import {User} from '../user/user';
+import {UserService} from '../user/user.service';
 
 
 
@@ -11,14 +12,14 @@ import {UserService} from "../user/user.service";
 
 })
 export class NavbarComponent implements OnInit {
-  user:User;
+  user: User;
 
-  constructor(private _nest:UserService) {
+  constructor(private _nest: UserService) {
 
   }
 
   ngOnInit() {
-    this.user=this._nest.getUser();
+    this.user = this._nest.getUser();
 
   }
 

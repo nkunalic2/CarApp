@@ -25,7 +25,7 @@ export class DataService {
     this.http = http;
   }
 
-  //HTTP service
+  //HTTP service for retrieving countries data
   getData (): Observable<any>{
     return this.http.get(this.endpoint_url)
       .map( res=>  res.json())

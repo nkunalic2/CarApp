@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
+import { RouterModule} from '@angular/router';
+
 import { NavbarComponent } from './navbar.component';
-import {Routes, RouterModule, Route} from '@angular/router'
 
 @NgModule({
   imports: [RouterModule

@@ -4,6 +4,34 @@
            formControlName={{controlName}}
     >
 
+    <!--<div [hidden]="formName.controls[controlName].valid || formName.controls[controlName].pristine && !notValidated-->
+<!--"-->
+         <!--class="alert alert-danger">-->
+      <!--Name is required-->
+    <!--</div>-->
+
+    <!--<div *ngIf="!formName.controls[controlName].valid && formName.controls[controlName].dirty " class="errorMessage">-->
+      <!--Input is required.-->
+
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <span style="color:red; font-size: 80%" *ngIf="(!formName.controls[controlName].valid && !formName.controls[controlName].errors?.email && formName.controls[controlName].dirty) || (notValidated && !formName.controls[controlName].dirty ) ">Input is required.</span>
+    <span style="color:red; font-size: 80%" *ngIf="(formName.controls[controlName].errors?.email || !formName.controls[controlName].valid)&& formName.controls[controlName].dirty">Email format is example@com.com.</span>
   </div>
 </form>
+
+<!--<form [formGroup]=formName>-->
+<!--<div class="form-group" ngclass="{'has-error': formName.controls[controlName].valid && formName.controls[controlName].touched , formName.controls[controlName].valid}">-->
+
+  <!--<div class={{bootstrap}}>-->
+    <!--<input type={{type}} class="form-control" placeholder={{placeholder}} autofocus   name={{name}} value={{formName.controls[controlName].value}}-->
+           <!--formControlName={{controlName}}-->
+    <!--&gt;-->
+
+    <!--<div class="col-sm-3">-->
+      <!--<span class="help-block" ng-show="formName.controls[controlName].valid && formName.controls[controlName].touched">Please enter text.</span>-->
+    <!--</div>-->
+
+  <!--</div>-->
+  <!--</div>-->
+<!--</form>-->
 

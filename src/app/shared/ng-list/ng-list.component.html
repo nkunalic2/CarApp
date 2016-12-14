@@ -4,7 +4,6 @@
   <div *ngIf="items.length>0">
   <ng-select [allowClear]="true"
              [items]="items"
-
              (data)="refreshValue($event)"
              (selected)="selected($event)"
              (removed)="removed($event)"

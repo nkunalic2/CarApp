@@ -28,7 +28,6 @@
         <div class="form-group"></div>
         <!--STEP 2 FORM-->
         <div class="row">
-
           <div class="col-md-offset-2 col-md-3 col-sm-12">
             <label>Birth date *</label>
             <app-ng-datepicker [controlName]="'birthDay'" [formName]="stepTwoForm"></app-ng-datepicker>
@@ -36,13 +35,9 @@
           <div class="col-md-offset-1 col-md-4 col-sm-12">
             <label>Birth place country *</label>
             <app-ng-select [controlName]="'birthPlace'" [formName]="stepTwoForm" [countriesData]=countries></app-ng-select>
-            <!--<app-ng-input [bootstrap]="''" [type]="'text'" [placeholder]="'Birth place *'" [name]="'birthPlace'" [formName]=stepTwoForm [controlName]="'birthPlace'" ></app-ng-input>-->
           </div>
-
         </div>
-
         <div class="form-group"></div>
-
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-3 ">
             <label>Avatar</label>
@@ -55,7 +50,6 @@
         <!--STEP 2 FORM END-->
         <div class="form-group"></div>
         <!--STEP 3 FORM-->
-
         <div class="row"  *ngIf="marriageForm.controls['firstName'].touched">
           <div class="row">
        <span class="col-sm-12 col-md-offset-2 col-md-4">
@@ -72,32 +66,44 @@
           </div>
           <div class="row">
             <app-ng-input [bootstrap]="'col-sm-12 col-md-offset-2 col-md-4'" [type]="'text'" [placeholder]="'first name *'" [name]="'firstname'" [formName]="marriageForm" [controlName]="'firstName'" ></app-ng-input>
-            <div class="col-sm-3">
-              <!--<app-ng-datepicker [formName]=marriageForm [controlName]="'birthDay'"></app-ng-datepicker>-->
-
-              <!--{{JSON.stringify(this.birthDay.value)}}-->
+            <div class="col-sm-5">
+             {{marriageForm.controls['birthDay'].value.formatted}}
             </div>
           </div>
           <div class="row">
              <span class="col-sm-12 col-md-offset-2 col-md-4">
             How long do you know each other *
             </span>
-
           </div>
           <div class="row">
             <div class="col-sm-12 col-md-offset-2 col-md-4">
-
               <app-ng-select [controlName]="'time'" [formName]="marriageForm" [countriesData]=options></app-ng-select>
-
             </div>
-
+          </div>
+          <div class="row">
+            <div class="col-sm-6  col-md-6">
+            </div>
           </div>
           </div>
         <!--STEP 3 FORM END-->
-
-
-
-
+        <div class="form-group"></div>
+      <div class="row">
+        <div class="col-sm-4 col-sm-offset-5">
+          <p class="h5">Are you sure?</p>
+        </div>
+      </div>
+        <div class="row">
+          <div class="col-sm-2 col-sm-offset-4">
+        <button type="button" (click)="lgModal.hide()" aria-label="Close" style="width:100%">
+          No
+        </button>
+          </div>
+          <div class="col-sm-2 ">
+            <button type="button" (click)="show()" aria-label="Close" style="width:100%">
+              Yes
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

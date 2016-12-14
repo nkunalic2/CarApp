@@ -2,9 +2,10 @@
  * Created by nadinak on 12/6/2016.
  */
 
-import {Component, Input} from '@angular/core';
-import {SignupService} from "../../signup/signup.service";
+import {Component} from '@angular/core';
 import {FormGroup} from "@angular/forms";
+
+import {SignupService} from "../../signup/signup.service";
 
 
 @Component({
@@ -31,9 +32,7 @@ export class  NgRadioButtonComponent {
 ];
   constructor (private signupService: SignupService){
     this.stepThreeForm=<FormGroup>this.signupService.signUpForm.controls['stepThreeForm'];
-
   }
-
   ngOnInit(){
 
   }

@@ -3,7 +3,7 @@
  */
 import { Injectable } from '@angular/core';
 import {FormBuilder, FormGroup, FormControl, Validators} from "@angular/forms";
-
+import { CustomValidators } from 'ng2-validation';
 
 @Injectable()
 
@@ -21,11 +21,11 @@ export class SignupService{
       title: new FormControl(''),
       progress: new FormControl(''),
       stepOneForm: new FormGroup({
-        firstName: new FormControl('', [<any> Validators.required]),
+        firstName: new FormControl('', Validators.required),
         lastName: new FormControl('', [<any> Validators.required]),
-        email: new FormControl('', [<any> Validators.required]),
+        email: new FormControl('', [CustomValidators.email, Validators.required]),
         password: new FormControl('', [<any> Validators.required]),
-        privacyAgreement: new FormControl('', [<any> Validators.required])
+        privacyAgreement: new FormControl('true', [<any> Validators.required])
       }),
       stepTwoForm: new FormGroup({
         birthDay: new FormControl(''),

@@ -17,22 +17,15 @@ export class StepThreeComponent implements OnInit {
 stepThreeForm: FormGroup;
   currentStep= 3;
   marriageForm: FormGroup;
-  checkboxValue: boolean;
   signupForm:FormGroup;
+  //options for marriage time
   options: Option []=[
     {name:'Less then a year'},
     {name:'1-5 years'},
     {name:'More then 5 years'}
   ];
-  // options:[
-  //   {name:"Less then a year"},
-  //   {name:"1-5 years"},
-  //   {name:"More then 5 years"}
-  //   ];
   constructor(private singupService: SignupService, private router: Router) {
   }
-
-
   ngOnInit() {
     this.signupForm=<FormGroup>this.singupService.signUpForm;
     this.stepThreeForm=<FormGroup>this.singupService.signUpForm.controls['stepThreeForm'];
@@ -40,23 +33,10 @@ stepThreeForm: FormGroup;
     this.marriageForm=<FormGroup>this.stepThreeForm.controls['marriageForm'];
     console.log('condata',this.options);
   }
-
   previousForm(){
-    // console.log(this.stepThreeForm.controls['source']);
+    // navigating to previous step;
     this.router.navigate(["signup/step2"]);
   }
   addProp(e){
-    // if(this.checkboxValue==false){
-    //    this.checkboxValue=true;
-    // }
-    // else{
-    //   this.checkboxValue=false;
-    // }
-
-  }
-
-  submitForm(){
-    this.router.navigate(["signup/step4"])
-    // console.log('3',this.stepThreeForm);
   }
 }

@@ -13,6 +13,7 @@ export class StepTwoComponent implements OnInit {
   stepTwoForm: FormGroup;
   currentStep= 2;
   countries: {};
+  notValidated=false;
   constructor(private _signupService: SignupService, private router: Router, private dataService:DataService) { }
 
   ngOnInit() {
@@ -28,7 +29,14 @@ export class StepTwoComponent implements OnInit {
   submitForm(){
     console.log('two', this.stepTwoForm);
     //navigating to next step
+    if(this.stepTwoForm.valid) {
+      this.notValidated = false;
     this.router.navigate(["signup/step3"]);
+    }
+    else{
+
+      this.notValidated = true;
+    }
   }
 
   //method for calling service where countries will be fatched

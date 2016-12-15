@@ -4,7 +4,7 @@
   <select class="form-control" formControlName={{controlName}} >
     <option *ngFor="let o of countriesData"  [ngValue]="o.name" [selected]="o.name=== formName.controls[controlName].value">{{o.name}}</option>
   </select>
-
+  <span style="color:red; font-size: 80%" *ngIf="(!formName.controls[controlName].valid && notValidated) || (notValidated && !formName.controls[controlName].dirty) ">Please pick a cuntry.</span>
 </form>
 
 

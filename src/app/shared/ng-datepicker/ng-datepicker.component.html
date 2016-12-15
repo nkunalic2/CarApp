@@ -1,4 +1,7 @@
 <form [formGroup]=formName>
   <ng2-datepicker formControlName={{controlName}}></ng2-datepicker>
+  <div>
+  <span style="color:red; font-size: 80%" *ngIf="(notValidated && !formName.controls[controlName].dirty && !formName.controls[controlName].valid ) ">Please pick a date.</span>
+  </div>
 </form>
 

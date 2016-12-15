@@ -9,12 +9,12 @@ import { CustomValidators } from 'ng2-validation';
 
 export class SignupService{
   currentStep=1;
-  signUpForm:FormGroup;
+  signUpForm: FormGroup;
   // stepOneForm:FormGroup;
-  stepTwoForm:FormGroup;
-  stepThreeForm:FormGroup;
-  stepFourForm:FormGroup;
-  marriageTime:any;
+  stepTwoForm: FormGroup;
+  stepThreeForm: FormGroup;
+  stepFourForm: FormGroup;
+  marriageTime: any;
 
   constructor(private formBuilder:FormBuilder) {
     this.signUpForm = this.formBuilder.group({
@@ -28,13 +28,12 @@ export class SignupService{
         privacyAgreement: new FormControl('true', [<any> Validators.required])
       }),
       stepTwoForm: new FormGroup({
-        birthDay: new FormControl(''),
-        birthPlace: new FormControl(''),
+        birthDay: new FormControl('', Validators.required),
+        birthPlace: new FormControl('', Validators.required),
         profilePic: new FormControl('http://2.bp.blogspot.com/-KLcHPORC4do/TbJCkjjkiBI/AAAAAAAAACw/zDnMSWC_R0M/w1200-h630-p-nu/facebook-no-image1.gif'),
         comment:new FormControl(''),
       }),
       stepThreeForm:new FormGroup({
-        birthTime: new FormControl(''),
        source: new FormControl(''),
         marriageForm:new FormGroup({
           firstName: new FormControl('', [<any> Validators.required]),

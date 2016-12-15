@@ -16,6 +16,7 @@ export class NgSelectComponent {
   @Input() countriesData: any;
   @Input() formName:FormGroup;
   @Input() controlName:any;
+  @Input() notValidated:boolean;
 
   private selectedData: any;
 

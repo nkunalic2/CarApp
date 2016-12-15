@@ -11,6 +11,7 @@ import {FormGroup} from "@angular/forms";
 export class  NgDatepickerComponent {
   @Input() formName: FormGroup;
   @Input() controlName: any;
+  @Input() notValidated: boolean;
   constructor(){
   }
 

@@ -25,7 +25,7 @@ export class StepOneComponent implements OnInit {
   }
 
   submitForm(){
-    //navigating to next step
+    //navigating to next step if form is validated
     if(this.stepOneForm.valid) {
       this.notValidated = false;
     this.router.navigate(["signup/step2"]);

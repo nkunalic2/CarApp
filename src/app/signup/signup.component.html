@@ -1,11 +1,3 @@
-<!--<div class="row">-->
-<!--<h1>Sign Up</h1>-->
-<!--</div>-->
-<!--<div class="row">-->
-<!--{{currentStep}}-->
-<!--</div>-->
-
-
 <div class="container">
   <div class="row"  *ngIf="getStep()!=4">
       <h1 class="col-xs-12 col-md-8 col-md-offset-2 responsiveForm">Sign Up</h1>
@@ -13,22 +5,8 @@
   <div class="row" *ngIf="getStep()!=4">
     <form [formGroup]="_signUpForm" class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 responsiveForm">
       <label class=" progress-bar"> step {{getStep()}}/{{numberOfSteps}}</label>
-
-      <!--<div class="input-group">-->
-        <!--<input class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker" required>-->
-        <!--<div class="input-group-addon" (click)="d.toggle()" >-->
-          <!--<i class="fa fa-calendar" aria-hidden="true"></i>-->
-        <!--</div>-->
-      <!--</div>-->
-
-
-
     </form>
-
   </div>
-
-
-
+<!--router-outlet for injecting content of current step (current route)-->
   <router-outlet></router-outlet>
-
 </div>

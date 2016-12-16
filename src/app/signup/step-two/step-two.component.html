@@ -1,36 +1,53 @@
 <div class="row">
   <div class="col-md-offset-2 col-md-3 col-sm-12">
+    <!-- Datepicker for selecting birthday - required -->
       <label>Birth date *</label>
-      <app-ng-datepicker [formName]="stepTwoForm" [controlName]="'birthDay'" [notValidated]="notValidated"></app-ng-datepicker>
+      <app-ng-datepicker [formName]="stepTwoForm"
+                         [controlName]="'birthDay'"
+                         [notValidated]="notValidated">
+      </app-ng-datepicker>
   </div>
   <div class="col-md-offset-1 col-md-4 col-sm-12">
+    <!-- Dropdown for selecting birtplace - required -->
       <label>Birth place country *</label>
-      <app-ng-select [controlName]="'birthPlace'" [formName]="stepTwoForm" [countriesData]=countries [notValidated]="notValidated"></app-ng-select>
+      <app-ng-select [controlName]="'birthPlace'"
+                     [formName]="stepTwoForm"
+                     [countriesData]=countries
+                     [notValidated]="notValidated">
+      </app-ng-select>
   </div>
 </div>
 <div class="form-group"></div>
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-3 ">
+      <!-- Select profile picture -->
       <label>Avatar</label>
       <ng-avatar></ng-avatar>
     </div>
     <div class="col-md-offset-1 col-md-4 col-sm-12">
-      <app-ng-textarea [controlName]="'comment'" [formName]="'stepTwoForm'"></app-ng-textarea>
+      <!-- customized text area for inputing comment -->
+      <app-ng-textarea
+        [controlName]="'comment'"
+        [formName]="'stepTwoForm'">
+      </app-ng-textarea>
     </div>
   </div>
   <div class="form-group"></div>
   <div class="form-group"></div>
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-3 ">
+      <!--button for navigating to previous step-->
     <button type="button" class="btn btnStyle"  (click)="previousForm()">previous</button>
       </div>
     <div class="col-xs-12 col-sm-12 col-md-offset-2 col-md-3 ">
       <div class="visible-xs-block form-group"></div>
+      <!--button for navigating to next step-->
       <button type="button" class="btn btnStyle"  (click)="submitForm()">next</button>
     </div>
   </div>
 <div class="form-group"></div>
 <div class="form-group"></div>
+<!-- validation message - displaying only if form is not validated-->
 <div class="row">
   <div *ngIf="notValidated" class="alert alert-danger col-sm-8 col-sm-offset-2">
     Please fill out the form properly.

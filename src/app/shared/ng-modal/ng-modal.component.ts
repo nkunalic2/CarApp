@@ -25,9 +25,9 @@ export class ModalDemoComponent {
   selected:any;
   countries: {};
 
-  constructor(private signupService: SignupService, private dataService:DataService){}
+  constructor(private signupService: SignupService, private dataService:DataService) {}
 
-  ngOnInit(){
+  ngOnInit() {
     this.stepOneForm=<FormGroup>this.formName.controls['stepOneForm'];
     this.stepTwoForm=<FormGroup>this.formName.controls['stepTwoForm'];
     this.stepThreeForm=<FormGroup>this.formName.controls['stepThreeForm'];
@@ -53,10 +53,6 @@ export class ModalDemoComponent {
 
   public hideChildModal():void {
     this.childModal.hide();
-  }
-
-  public getMarriageStatus(){
-   return this.signupService.getMarriage();
   }
 
   public show(){

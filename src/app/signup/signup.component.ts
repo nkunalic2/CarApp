@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, FormControl, Validators} from "@angular/forms";
+import {FormGroup} from "@angular/forms";
+
 import {SignupService} from "./signup.service";
 
 
@@ -8,25 +9,22 @@ import {SignupService} from "./signup.service";
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
+
+/* root component for step 1, step 2 and step 3 component */
 export class SignupComponent implements OnInit {
-  // currentStep=1;
+ //nubmer of steps for the progress bar
   numberOfSteps=3;
   _signUpForm:FormGroup;
-  value: Date;
-
-  currentStep:number;
 
   constructor( private signupService: SignupService) { }
 
   ngOnInit() {
-  //   this.signUpForm = this.formBuilder.group({
-  //    title: new FormControl(''),
-  //    progress: new FormControl('')
-  //   });
+  // retireving signUp form from service
     this._signUpForm=this.signupService.signUpForm;
-    // this.currentStep=this.signupService.currentStep;
    }
-   getStep(){
+
+   // retrieving current step for the progress bar
+   getStep() {
      return this.signupService.getStep();
    }
 }
